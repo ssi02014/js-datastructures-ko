@@ -1,9 +1,3 @@
-/**
- * @copyright 2021 JeonMinJae <ssi02014@naver.com>
- *
- * @class
- */
-
 class Stack {
   constructor() {
     this.arr = [];
@@ -22,20 +16,23 @@ class Stack {
   /**
    * Remove an element from the stack
    * @public
-   * @returns {array}
+   * @returns {any}
    */
   pop() {
-    if (this.isEmpty()) new Error("Stack is empty");
+    if (this.isEmpty()) throw new Error("Stack is empty");
     else {
-      --this.index;
-
+      const previous = this.arr[this.index - 1];
       const temp = [];
+
+      this.index--;
+
       for (let i = 0; i < this.index; i++) {
         temp[i] = this.arr[i];
       }
       this.arr = temp;
+
+      return previous;
     }
-    return this.arr[this.index];
   }
 
   /**

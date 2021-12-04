@@ -1,3 +1,8 @@
-const Stack = require("./src/stack");
+/**
+ * @copyright 2021 JeonMinJae <ssi02014@naver.com>
+ */
 
-module.exports = { Stack };
+const Stack = require("./src/stack");
+const Queue = require("./src/queue");
+
+module.exports = { Stack, Queue };
