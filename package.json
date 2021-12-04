@@ -1,14 +1,14 @@
 {
-  "name": "simple-datastructures-js",
-  "version": "1.0.0",
-  "description": "js-datastructures",
+  "name": "js-datastructures-ko",
+  "version": "1.0.2",
+  "description": "js-datastructures-ko",
   "main": "index.js",
   "scripts": {
     "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ssi02014/js-datastructures.git"
+    "url": "git+https://github.com/ssi02014/js-datastructures-ko.git"
   },
   "keywords": [
     "datastructres",
@@ -17,7 +17,10 @@
   "author": "Minjae",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ssi02014/js-datastructures/issues"
+    "url": "https://github.com/ssi02014/js-datastructures-ko/issues"
   },
-  "homepage": "https://github.com/ssi02014/js-datastructures#readme"
+  "homepage": "https://github.com/ssi02014/js-datastructures-ko#readme",
+  "dependencies": {
+    "simple-datastructures-js": "^1.0.1"
+  }
 }
