@@ -1,0 +1,23 @@
+{
+  "name": "simple-datastructures-js",
+  "version": "1.0.0",
+  "description": "js-datastructures",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssi02014/js-datastructures.git"
+  },
+  "keywords": [
+    "datastructres",
+    "javascript"
+  ],
+  "author": "Minjae",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ssi02014/js-datastructures/issues"
+  },
+  "homepage": "https://github.com/ssi02014/js-datastructures#readme"
+}
