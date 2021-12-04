@@ -19,7 +19,7 @@ class Queue {
    * @returns {any}
    */
   dequeue() {
-    if (this.isEmpty()) throw new Error("queue is empty");
+    if (this.isEmpty()) return undefined;
     else {
       const previous = this.arr[0];
       const temp = [];
@@ -50,6 +50,26 @@ class Queue {
    */
   size() {
     return this.arr.length;
+  }
+
+  /**
+   * Returns the top element of the stack.
+   * @public
+   * @returns {any}
+   */
+  top() {
+    if (this.isEmpty()) return undefined;
+    return this.arr[this.size() - 1];
+  }
+
+  /**
+   * Returns the bottom element of the stack.
+   * @public
+   * @returns {any}
+   */
+  bottom() {
+    if (this.isEmpty()) return undefined;
+    return this.arr[0];
   }
 
   /**
