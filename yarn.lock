@@ -2,6 +2,13 @@
 # yarn lockfile v1
 
 
+js-datastructures-ko@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/js-datastructures-ko/-/js-datastructures-ko-1.0.3.tgz#08b5377085b65978194d48d1a1c7f042bc53c790"
+  integrity sha512-4EHJBiETM6My0Wi95ZO24CK08N71J9EtA6CTW2F7oBsmIzgfKhjb9S4nYVH+GlYU/skSp+ccDBqdCeh9EsKCdw==
+  dependencies:
+    simple-datastructures-js "^1.0.1"
+
 simple-datastructures-js@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/simple-datastructures-js/-/simple-datastructures-js-1.0.1.tgz#0d4148449ebe86a3ef6e1e24a2dd238367e56f5b"

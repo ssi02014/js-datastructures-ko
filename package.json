@@ -1,6 +1,6 @@
 {
   "name": "js-datastructures-ko",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "js-datastructures-ko",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,9 @@
   },
   "keywords": [
     "datastructres",
-    "javascript"
+    "javascript",
+    "korea",
+    "js-datastructures-ko"
   ],
   "author": "Minjae",
   "license": "ISC",
@@ -21,6 +23,6 @@
   },
   "homepage": "https://github.com/ssi02014/js-datastructures-ko#readme",
   "dependencies": {
-    "simple-datastructures-js": "^1.0.1"
+    "js-datastructures-ko": "^1.0.3"
   }
 }
