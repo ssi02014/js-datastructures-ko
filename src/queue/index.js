@@ -16,7 +16,7 @@ class Queue {
 
   /**
    * Remove an element from the queue and return the removed element.
-   * 큐에서 요소 제거
+   * 큐에서 요소 제거 후 제거된 요소 반환
    * @public
    * @returns {any}
    */
