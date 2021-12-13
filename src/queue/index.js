@@ -87,6 +87,18 @@ class Queue {
     this.arr = [];
     this.length = 0;
   }
+
+  /**
+   * Print data from Queue
+   * 큐 데이터 출력
+   * @public
+   */
+  print() {
+    if (this.isEmpty()) return undefined;
+    for (let i = 0; i < this.size(); i++) {
+      console.log(this.arr[i]);
+    }
+  }
 }
 
 module.exports = Queue;

@@ -86,14 +86,18 @@ class Stack {
     this.arr = [];
     this.length = 0;
   }
+
+  /**
+   * Print data from Stack
+   * 스택 데이터 출력
+   * @public
+   */
+  print() {
+    if (this.isEmpty()) return undefined;
+    for (let i = 0; i < this.size(); i++) {
+      console.log(this.arr[i]);
+    }
+  }
 }
-
-const stack = new Stack();
-
-stack.push(1);
-stack.push(2);
-stack.pop();
-
-console.log(stack);
 
 module.exports = Stack;
