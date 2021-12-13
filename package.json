@@ -28,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/ssi02014/js-datastructures-ko/issues"
   },
-  "homepage": "https://github.com/ssi02014/js-datastructures-ko#readme"
+  "homepage": "https://github.com/ssi02014/js-datastructures-ko#readme",
+  "publishConfig": {
+    "registry": "https://www.npmjs.com/package/js-datastructures-ko"
+  }
 }
