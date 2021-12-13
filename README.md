@@ -14,6 +14,8 @@
 
 ## 📄 패키지 사용 가이드(Package Usage Guide)
 ### 1. 스택(Stack)
+- 컴퓨터의 기본적인 자료 구조중 한가지로, 입출력 방식은 `후입선출(LIFO:Last In, First Out)` 방식인 자료 구조이다.
+- It is one of the basic data structures of computers, and the input/output method is a `Last in, First Out (FIFO)` method.
 ```js
   const { Stack } = requires('js-datastructures-ko');
 
@@ -23,16 +25,19 @@
   stack.push(2);
   stack.push(3);
   stack.push(4);
-  stack.pop();
-  console.log(stack.pop()); // 3
-  console.log(stack); // Stack { arr: [ 1, 2 ], index: 2 }
-  console.log(stack.top()); // 2
+  console.log(stack.pop()); // 4
+  console.log(stack); // Stack { arr: [ 1, 2, 3 ], length: 3 }
+  console.log(stack.top()); // 3
   console.log(stack.bottom()); // 1
+
+  stack.print() // 1 2 3
 ```
 
 <br />
 
 ### 2. 큐(Queue)
+- 컴퓨터의 기본적인 자료 구조중 한가지로, 입출력 방식은 `선입선출(FIFO:First In, First Out)` 방식인 자료 구조이다.
+- It is one of the basic data structures of computers, and the input/output method is a `First in, First Out (FIFO)` method.
 ```js
   const { Queue } = require("js-datastructures-ko");
 
@@ -41,11 +46,34 @@
   queue.enqueue(1);
   queue.enqueue(2);
   queue.enqueue(3);
-  console.log(queue); // Queue { arr: [ 1, 2, 3 ], index: 3 }
+  queue.enqueue(4);
   console.log(queue.dequeue()); // 1
-  console.log(queue); // Queue { arr: [ 2, 3 ], index: 2 }
-  console.log(queue.top()); // 3
+  console.log(queue); // Queue { arr: [ 2, 3, 4 ], length: 3 }
+  console.log(queue.top()); // 4
   console.log(queue.bottom()); // 2
+
+  queue.print() // 2 3 4
+```
+
+<br />
+
+### 3. 연결리스트(Linked list)
+- 자료구조의 각 부분인 `노드들이 연결되어 있는 방식`으로 데이터를 저장하는 자료구조이다.
+- It is a data structure that stores data in a way that nodes, which are each part of the data structure, are connected.
+```js
+  const { LinkedList } = require("js-datastructures-ko");
+
+  const linkedList = new LinkedList();
+
+  linkedList.insertFirst(1);
+  linkedList.insertLast(2);
+  linkedList.insertLast(4);
+  linkedList.insertAt(3, 2);
+
+  console.log(linkedList.search(2)); // 3
+  linkedList.removeAt(0);
+
+  linkedList.print(); // 2 3 4
 ```
 
 <br />
