@@ -70,6 +70,13 @@
   linkedList.insertLast(4);
   linkedList.insertAt(3, 2);
 
+  /*
+    LinkedList {
+      length: 4,
+      head: Node { data: 1, next: Node { data: 2, next: [Node] } }
+    }
+  */
+  console.log(linkedList);
   console.log(linkedList.search(2)); // 3
   linkedList.removeAt(0);
 
