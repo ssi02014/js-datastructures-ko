@@ -1,20 +1,22 @@
 class Queue {
   constructor() {
     this.arr = [];
-    this.index = 0;
+    this.length = 0;
   }
 
   /**
    * Adds an element to the queue
+   * 큐에 요소를 추가
    * @public
    * @param {any} element
    */
   enqueue(element) {
-    this.arr[this.index++] = element;
+    this.arr[this.length++] = element;
   }
 
   /**
-   * Remove an element from the queue
+   * Remove an element from the queue and return the removed element.
+   * 큐에서 요소 제거
    * @public
    * @returns {any}
    */
@@ -24,11 +26,11 @@ class Queue {
       const previous = this.arr[0];
       const temp = [];
 
-      for (let i = 1; i < this.index; i++) {
+      for (let i = 1; i < this.length; i++) {
         temp[i - 1] = this.arr[i];
       }
       this.arr = temp;
-      this.index--;
+      this.length--;
 
       return previous;
     }
@@ -36,6 +38,7 @@ class Queue {
 
   /**
    * Check if the queue is empty
+   * 큐가 비었는지 확인
    * @public
    * @returns {boolean}
    */
@@ -45,6 +48,7 @@ class Queue {
 
   /**
    * Check the queue size.
+   * 큐의 크기를 확인
    * @public
    * @returns {number}
    */
@@ -53,7 +57,8 @@ class Queue {
   }
 
   /**
-   * Returns the top element of the stack.
+   * Returns the top element of the queue.
+   * 큐의 최상의 요소를 반환
    * @public
    * @returns {any}
    */
@@ -63,7 +68,8 @@ class Queue {
   }
 
   /**
-   * Returns the bottom element of the stack.
+   * Returns the bottom element of the queue.
+   * 큐의 맨 아래 요소를 반환
    * @public
    * @returns {any}
    */
@@ -74,11 +80,12 @@ class Queue {
 
   /**
    * Clear the queue
+   * 큐 초기화
    * @public
    */
   clear() {
     this.arr = [];
-    this.index = 0;
+    this.length = 0;
   }
 }
 

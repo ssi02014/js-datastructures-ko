@@ -11,14 +11,11 @@ class LinkedList {
    * 연결 리스트 첫번째 인덱스에 데이터 삽입
    * @public
    * @param {any} data
-   * @returns {any}
    */
   insertFirst(data) {
     const node = new Node(data, this.head);
     this.head = node;
     this.length += 1;
-
-    return node.data;
   }
 
   /**
@@ -26,7 +23,6 @@ class LinkedList {
    * 연결 리스트 마지막 인덱스에 데이터 삽입
    * @public
    * @param {any} data
-   * @returns {any}
    */
   insertLast(data) {
     const node = new Node(data);
@@ -41,7 +37,6 @@ class LinkedList {
       current.next = node;
     }
     this.length += 1;
-    return node.data;
   }
 
   /**
@@ -50,40 +45,32 @@ class LinkedList {
    * @public
    * @param {any} data
    * @param {number} index
-   * @returns {any}
    */
   insertAt(data, index) {
-    if (index > 0 && index > this.length) {
-      throw new Error("Linked list range exceeded.");
-    } else if (!index) {
+    rangeCheck(index);
+
+    if (!index) {
       const node = new Node(data, this.head);
       this.head = node;
       this.length += 1;
-
-      return node.data;
     }
 
     const node = new Node(data);
-    let previous = {};
     let current = this.head;
     let count = 0;
 
     while (count < index) {
-      previous = current;
       count++;
       current = current.next;
     }
 
     node.next = current;
-    previous.next = node;
     this.length += 1;
-
-    return node.data;
   }
 
   /**
-   * Search for a specific index in linked list
-   * 연결 리스트 특정 인덱스를 검색
+   * Search for data at a specific index in linked list
+   * 연결 리스트 특정 인덱스의 데이터를 검색
    * @public
    * @param {number} index
    * @returns {any}
@@ -103,8 +90,8 @@ class LinkedList {
   }
 
   /**
-   * Remove a specific index from a linked list
-   * 연결 리스트 특정 인덱스를 제거
+   * Remove the linked list specific index and return the removed element.
+   * 연결 리스트 특정 인덱스를 제거 후 제거된 요소 반환
    * @public
    * @param {number} index
    * @returns {any}
@@ -113,9 +100,7 @@ class LinkedList {
     let current = this.head;
     let count = 0;
 
-    if (index > 0 && index > this.length) {
-      throw new Error("Linked list range exceeded.");
-    }
+    rangeCheck(index);
 
     if (!index) {
       this.head = current.next;
@@ -151,6 +136,20 @@ class LinkedList {
       console.log(current.data);
       current = current.next;
     }
+  }
+
+  /**
+   * Check the range of the input index.
+   * 연결 리스트 데이터 출력
+   * @public
+   */
+  rangeCheck(index) {
+    if (index > 0 && index > this.length) {
+      throw new Error("Linked list range exceeded.");
+    } else if (index < 0) {
+      throw new Error("The index cannot be less than zero.");
+    }
+    return true;
   }
 }
 
