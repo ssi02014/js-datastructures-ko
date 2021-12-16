@@ -65,9 +65,9 @@
 
   const linkedList = new LinkedList();
 
-  linkedList.insertFirst(1);
-  linkedList.insertLast(2);
-  linkedList.insertLast(4);
+  linkedList.prepend(1);
+  linkedList.append(2);
+  linkedList.append(4);
   linkedList.insertAt(3, 2);
 
   /*

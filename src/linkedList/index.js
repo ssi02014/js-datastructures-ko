@@ -12,7 +12,7 @@ class LinkedList {
    * @public
    * @param {any} data
    */
-  insertFirst(data) {
+  prepend(data) {
     const node = new Node(data, this.head);
     this.head = node;
     this.length += 1;
@@ -24,7 +24,7 @@ class LinkedList {
    * @public
    * @param {any} data
    */
-  insertLast(data) {
+  append(data) {
     const node = new Node(data);
     let current = this.head; // Copy Reference
 
