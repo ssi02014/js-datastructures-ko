@@ -84,3 +84,36 @@
 ```
 
 <br />
+
+### 4. 해시 맵(HashMap)
+- Java에있는 HashMap과 유사하게 자바스크립트로 구현
+- It's implemented in JavaScript similar to HashMap in Java.
+- Map 인터페이스의 한 종류, `key-value` 형태로 데이터를 묶어 entry로 저장하는 형태이다.
+- It is a type of Map interface, a form of key-value, in which data is grouped and stored as entry.
+```js
+  const { HashMap } = require("js-datastructures-ko");
+
+  const hashMap = new HashMap();
+
+  hashMap.put("hi", 1);
+  hashMap.put("bye", 2);
+  hashMap.put(1, 3);
+  hashMap.remove("hi");
+
+  console.log(hashMap); // HashMap { map: { '1': 3, bye: 2 } }
+
+  console.log(hashMap.get(1)); // 3
+  console.log(hashMap.containsKey("hi")); // false
+  console.log(hashMap.containsValue(2)); // true
+  console.log(hashMap.keys()); // [ '1', 'bye' ]
+  console.log(hashMap.values()); // [ 3, 2 ]
+
+  const clone = hashMap.clone();
+  clone.put("hahaha", "hahaha");
+
+  console.log(hashMap); // HashMap { map: { '1': 3, bye: 2 } }
+  console.log(clone); // HashMap { map: { '1': 3, bye: 2, hahaha: 'hahaha' } }
+
+  hashMap.clear();
+  console.log(hashMap.isEmpty()); // true
+```

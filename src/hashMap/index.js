@@ -105,8 +105,8 @@ class HashMap {
   }
 
   /**
-   * Clone the Map.
-   * Map을 복사한다.
+   * Clone the map deeply
+   * Map을 깊은 복사한다.
    * @public
    * @returns {HashMap}
    */

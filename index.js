@@ -5,5 +5,6 @@
 const Stack = require("./src/stack");
 const Queue = require("./src/queue");
 const LinkedList = require("./src/linkedList");
+const HashMap = require("./src/hashMap");
 
-module.exports = { Stack, Queue, LinkedList };
+module.exports = { Stack, Queue, LinkedList, HashMap };
