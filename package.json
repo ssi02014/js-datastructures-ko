@@ -1,6 +1,6 @@
 {
   "name": "js-datastructures-ko",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "js-datastructures-ko",
   "main": "index.js",
   "scripts": {
@@ -11,17 +11,22 @@
     "url": "git+https://github.com/ssi02014/js-datastructures-ko.git"
   },
   "keywords": [
-    "datastructres",
+    "Datastructures",
     "algorithm",
+    "Algorithm",
     "javascript",
+    "JavaScript",
     "js",
     "korea",
     "korean",
     "ko",
     "js-datastructures-ko",
+    "js-datastructures",
+    "Javasciprt Datastructures",
     "Stack",
     "Queue",
-    "LinkedList"
+    "LinkedList",
+    "HashMap"
   ],
   "author": "Minjae",
   "license": "ISC",
